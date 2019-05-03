@@ -1,6 +1,8 @@
 const express = require("express");
 const helmet = require("helmet");
 const knex = require("knex");
+const knexConfig = require('./knexfile')
+const DB = knex(knexConfig.development)
 
 const knexConfig = {
   client: "sqlite3",
